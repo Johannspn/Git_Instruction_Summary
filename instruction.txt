@@ -1,0 +1,86 @@
+Lesson1: Git with commit:
+Initialization for git
+$ mkdir test  $cd test	$git init	$ git status 
+
+add repository from github to git:         next command for deleting oremote origin:
+$ git remote add origin https://github.com/Johannspn/test2.git
+$ git remote rm origin				
+
+Add file and create commit:
+$ git add info.txt			$ git status              
+$ git commit -m "Commiting a text file"
+$ git diff
+
+$ git push -u origin master     	We should use -u or upstream for first time:
+And this is summary again without any check:
+$ git init 	$ git remote add origin repo link 	$ git add info.txt >>>git commit -m "sth  here"		$git push -u origin master
+And summary for adding next commit:For add another file or change previous commit
+Make change or add files then: 
+$ git add .  $ git commit -m "sth  here for next commit"   $ git push origin master -u is not needed  $ git log		to check commit pr branches
+$ ls -ltr			to check all files:
+
+
+
+
+Part 2: git with branches
+initialization
+$ mkdir Org_Details     $ cd folder   $ git init    then add some files 
+$ git add .   	$ git commit -m "Master branch commit"  	
+$ git log	or	$ git log --pretty=oneline         to see all branches:
+
+Make another branch and add some files:
+$ git branch Blr_Branc
+$ git branch -v			show branches     or  check this  $ git branch -av
+
+Change branch with checkout:
+$ git checkout Blr_Branch   
+$ ls	we have all files from master too		 Create another file and again     $ ls      
+
+Add files and make a commit:
+$ git add .
+$ git commit -m "Blr Branch commit"
+
+Now connect to GitHub  and add all branches:
+$ git remote add origin git@github.com:Johannspn/Org_Details2.git
+$ git push -u origin master		Now add another branch:
+$ git push -u origin Blr_Branch
+
+Now go to master and merge branches:
+$ git merge Blr_Branch
+
+Attention before or after deleting branch we must push it to master
+$ git push origin master
+$ git log --pretty=oneline
+
+We can see both branches:	including deleted
+
+$  git branch -D Blr_Branch			delete extra branch
+
+$ git branch -v
+This code to check if branch is deleted:
+But we can’t use git log   because show deleted branches too:
+
+$ git push origin --delete Blr_Branch			delete from github
+
+
+
+
+Summary again no check:make master branch and add file and create commit like previous part
+ $ mkdir Org_Details  $ cd folder   $ git init    $ git add .  $ git commit -m "Master branch commit"  
+
+Make another branch and add some files:
+$ git branch Blr_Branc		$ git checkout Blr_Branch   
+$ git add .        add sth	$ git commit -m "Blr Branch commit"
+
+Now connect to GitHub  and add all branches:
+$ git remote add origin git@github.com:Johannspn/Org_Details2.git
+$ git push -u origin master		Now add another branch:
+$ git push -u origin Blr_Branch
+
+Merge in master and delete branch:
+$ git checkout master
+$ git merge Blr_Branch			$ git push origin master
+$  git branch -D Blr_Branch		delete extra branch in git
+
+$ git push origin --delete Blr_Branch			delete extra branch in github	
+
