@@ -84,3 +84,7 @@ $  git branch -D Blr_Branch		delete extra branch in git
 
 $ git push origin --delete Blr_Branch			delete extra branch in github	
 
+
+
+complete instruction in google drive:
+https://docs.google.com/document/d/14JOeubTP0uPR2SvEuij8lDY05XMUYii0V4TqFMQ3_IE/edit
